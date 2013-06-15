@@ -11,7 +11,8 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 		return -1;
 	}
 	
-	CONTROL *control = new CONTROL;
+	CONTROL *control;
+	*control = CONTROL::GetInstance();
 
 	while(ScreenFlip() == 0
 		&& ProcessMessage() ==0

@@ -115,6 +115,11 @@ void PLAYER::Shot()
 	}
 }
 
+void PLAYER::GetPosition( double *x, double *y ){
+	*x = this -> x;
+	*y = this -> y;
+}
+
 void PLAYER::All(){
 	Move();
 	Shot();

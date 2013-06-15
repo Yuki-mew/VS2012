@@ -25,11 +25,11 @@ struct E_SHOT{
 	bool flag;
 	double x;
 	double y;
+	double rad;
 	int gh;
 	int width, height;
 	int pattern;
 	double speed;
-	double angle;
 };
 
 extern int g_count;
@@ -57,4 +57,4 @@ struct ENEMYDATA {
 	int item;
 };
 
-#define ENEMY_NUM 5
+#define ENEMY_NUM 10

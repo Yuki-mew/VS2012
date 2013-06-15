@@ -81,6 +81,21 @@ CONTROL::~CONTROL(void){
 	}
 }
 
+void CONTROL::GetPlayerPosition( double *x, double *y ){
+	double tempx, tempy;
+
+	player -> GetPosition( &tempx, &tempy );
+	*x = tempx;
+	*y = tempy;
+}
+
+void CONTROL::GetEnemyPosition( int index, double *x, double *y ){
+	double tempx, tempy;
+	enemy[ index ] -> GetPosition( &tempx, &tempy );
+	*x = tempx;
+	*y = tempy;
+}
+
 void CONTROL::All(){
 	SetDrawArea(MARGIN, MARGIN, MARGIN + WIDTH, MARGIN + HEIGHT);
 	back -> All();
